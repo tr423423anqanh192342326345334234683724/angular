@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <menu>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="product-item" style="background-color: rgb(169, 168, 230);">Vitamin A</div>
+            </div>
+            <div class="col-md-4">
+                <div class="product-item" style="background-color: rgb(193, 235, 155);">Vitamin B</div>
+            </div>
+            <div class="col-md-4">
+                <div class="product-item" style="background-color: rgb(230, 168, 168);">Vitamin C</div>
+            </div>
+        </div>
+    </menu>
+    </div>
+    <div class="container" style="border-radius: 20px; background-color: aquamarine;">
+        <div class="col-md-12">
+            <input class="form-control" placeholder="Tìm Kiếm" type="text">
+            <button class="btn btn-primary btn-sm" type="submit" style="margin-left: 700px;">Tìm</button>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+    <div>
+        <button class="btn btn-primary btn-sm" type="submit" style="margin-left: 700px;" (click)="dangxuat()">Đăng Xuất</button>
+    </div>
+</body>
+</html>

@@ -14,7 +14,15 @@ export const routes: Routes = [
         component: LoginComponent
     },
     {
-        path: 'products',
-        component: ProductsComponent
+        path:'',
+        component: LayoutComponent,
+        children: [
+            {
+                path: 'products',
+                component: ProductsComponent
+            }
+        ]
     }
+        
+
 ];
