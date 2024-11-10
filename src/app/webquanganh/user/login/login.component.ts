@@ -19,8 +19,11 @@ export class LoginComponent {
   constructor(private router: Router, private http: HttpClient) {}
 
   kiemtradangnhap() {
-    this.http.post('http://localhost/phpmyadmin/index.php?route=/sql&pos=0&db=thuc_pham_chuc_nang&table=tai_khoan_khach_hang', this.login).subscribe((data: any) => {
+    if(this.login.username === '' || this.login.password === '') {
+      alert('Vui lòng nhập đẩy đủ thông tin');
+    } else {
       this.router.navigate(['/products']);
-    }); // Thêm dấu ngoặc đóng và dấu chấm phẩy
+    };
+   
   }
 }
