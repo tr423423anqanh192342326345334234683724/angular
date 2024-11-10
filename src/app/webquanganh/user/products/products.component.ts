@@ -3,7 +3,6 @@ import { MatListModule } from '@angular/material/list';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { SanphamService } from '../../../server/sanpham/sanpham.service';
 
 @Component({
   selector: 'app-products',
@@ -22,7 +21,7 @@ export class ProductsComponent {
     "soluong": 0,
   };
 
-  constructor(private router: Router, private sanphamService: SanphamService) {}
+  constructor(private router: Router ) {}
 
   openkiemtra() {
     this.kiemtra = true;

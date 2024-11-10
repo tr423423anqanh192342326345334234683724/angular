@@ -1,35 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tài liệu</title>
+    
 </head>
 <body>
-    <div class="container">
-    <menu>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="product-item" style="background-color: rgb(169, 168, 230);">Vitamin A</div>
-            </div>
-            <div class="col-md-4">
-                <div class="product-item" style="background-color: rgb(193, 235, 155);">Vitamin B</div>
-            </div>
-            <div class="col-md-4">
-                <div class="product-item" style="background-color: rgb(230, 168, 168);">Vitamin C</div>
-            </div>
-        </div>
-    </menu>
+    <div class="header">
+        <h1>Thực Phẩm Chức Năng, Chăm Sóc Sức Khỏe</h1>
     </div>
-    <div class="container" style="border-radius: 20px; background-color: aquamarine;">
-        <div class="col-md-12">
-            <input class="form-control" placeholder="Tìm Kiếm" type="text">
-            <button class="btn btn-primary btn-sm" type="submit" style="margin-left: 700px;">Tìm</button>
+    <div class="container">
+        <div class="form-group">
+            <input class="form-control" [(ngModel)]="timkiem" placeholder="Tìm Kiếm" type="text">
+            <button class="btn btn-primary" type="submit" (click)="timKiem()">Tìm</button>
+        </div>
+        <div class="button-group">
+            <button class="btn btn-primary" type="button" (click)="mathang()">Sản Phẩm</button>
+            <button class="btn btn-primary" type="button" (click)="lienhe()">Liên Hệ</button>
+            <button class="btn btn-primary" type="button" (click)="marsa()">Mã RSA</button>
         </div>
     </div>
     <router-outlet></router-outlet>
-    <div>
-        <button class="btn btn-primary btn-sm" type="submit" style="margin-left: 700px;" (click)="dangxuat()">Đăng Xuất</button>
+    <div class="button-group">
+        <button class="btn btn-primary" type="button" (click)="dangxuat()">Đăng Xuất</button>
     </div>
 </body>
 </html>
